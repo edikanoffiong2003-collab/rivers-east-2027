@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Senator Allwell Onyesoh 2027 - Grassroot Mobilization</title>
+  <style>
+    :root {
+      --apc-green: #28a745;
+      --apc-blue: #38bdf8;
+      --apc-red: #dc3545;
+      --apc-navy: #0f172a;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #1e293b; /* Clean neutral page background */
+    }
+
+    /* CARD CONTAINER WITH INTERNAL SLIDESHOW */
+    .container {
+      position: relative;
+      width: 90%;
+      max-width: 480px;
+      margin: 30px 15px;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      border-top: 8px solid var(--apc-green);
+      overflow: hidden; /* Keeps the slideshow inside the card corners */
+    }
+
+    /* SLIDESHOW INSIDE THE CARD */
+    .card-slideshow {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    .slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      transition: opacity 1.5s ease-in-out;
+    }
+
+    .slide.active {
+      opacity: 1;
+    }
+
+    /* WHITE OVERLAY INSIDE CARD FOR LEGIBILITY */
+    .card-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.45); /* White tint over images */
+      z-index: 2;
+    }
+
+    /* FORM CONTENT ON TOP OF CARD BACKGROUND */
+    .card-content {
+      position: relative;
+      z-index: 3;
+    }
+
+    .header-badge {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    .header-badge img {
+      width: 75px;
+      height: 75px;
+      border-radius: 50%;
+      border: 3px solid var(--apc-green);
+      object-fit: cover;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    h2 {
+      text-align: center;
+      color: var(--apc-navy);
+      margin: 5px 0;
+      font-size: 22px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    p.sub {
+      text-align: center;
+      color: #334155;
+      font-size: 13px;
+      margin-bottom: 25px;
+      font-weight: 700;
+    }
+
+    label {
+      font-weight: 700;
+      font-size: 13px;
+      color: #0f172a;
+      display: block;
+      margin-top: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 12px 14px;
+      margin-top: 6px;
+      border: 1.5px solid #94a3b8;
+      border-radius: 8px;
+      font-size: 15px;
+      background: rgba(255, 255, 255, 0.95);
+      color: #0f172a;
+      transition: border-color 0.2s;
+    }
+
+    input:focus, select:focus {
+      outline: none;
+      border-color: var(--apc-green);
+      box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.2);
+    }
+
+    button {
+      width: 100%;
+      background: var(--apc-green);
+      color: white;
+      border: none;
+      padding: 15px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 8px;
+      margin-top: 25px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(40, 167, 69, 0.4);
+      transition: background 0.2s;
+    }
+
+    button:hover {
+      background: #218838;
+    }
+
+    button:disabled {
+      background: #94d3a2;
+      cursor: not-allowed;
+    }
+
+    #status {
+      margin-top: 15px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- CARD WITH INTERNAL SLIDESHOW -->
+  <div class="container">
+    
+    <!-- Slideshow background inside the card -->
+    <div class="card-slideshow">
+      <div class="slide active" style="background-image: url('src/images_8f8ace88-dd5c-4a.jpg');"></div>
+      <div class="slide" style="background-image: url('src/images_de3423c5-1faa-46.jpg');"></div>
+      <div class="slide" style="background-image: url('src/1791969531358.jpg');"></div>
+    </div>
+    
+    <!-- Light overlay for readable text -->
+    <div class="card-overlay"></div>
+
+    <!-- Form content -->
+    <div class="card-content">
+      <div class="header-badge">
+        <img src="src/19f53b3ec07cfdf6637789a9037a212d.jpg" alt="Senator Allwell Onyesoh">
+        <img src="src/original.jpeg" alt="Senator Allwell Onyesoh">
+      </div>
+      <h2>JOIN THE CAMPAIGN TEAM <br></h2>
+      <p class="sub">Senator Allwell Onyesoh — Rivers East 2027</p>
+
+      <form id="campaignForm">
+        <label>Full Name *</label>
+        <input type="text" id="fullName" placeholder="Enter your full name" required>
+
+        <label>WhatsApp Number *</label>
+        <input type="tel" id="whatsapp" placeholder="e.g. 08012345678" required>
+
+        <label>Role / Position *</label>
+        <select id="role" required>
+          <option value="">-- Select Role --</option>
+          <option value="Register to Support">Register to Support</option>
+          <option value="Ward Coordinator">Ward Coordinator</option>
+          <option value="Canvassing">Canvassing</option>
+          <option value="Grassroot Mobilization">Grassroot Mobilization</option>
+        </select>
+
+        <label>Local Government Area (LGA) *</label>
+        <select id="lga" required>
+          <option value="">-- Select LGA --</option>
+          <option value="Emohua">Emohua</option>
+          <option value="Etche">Etche</option>
+          <option value="Ikwerre">Ikwerre</option>
+          <option value="Obio-Akpor">Obio-Akpor</option>
+          <option value="Ogu-Bolo">Ogu-Bolo</option>
+          <option value="Okrika">Okrika</option>
+          <option value="Omuma">Omuma</option>
+          <option value="Port Harcourt">Port Harcourt</option>
+        </select>
+
+        <label>Ward Name / Number *</label>
+        <input type="text" id="ward" placeholder="Enter your Ward (e.g. Ward 4 / Rumuodomaya)" required>
+
+        <label>Polling Unit Name / Number *</label>
+        <input type="text" id="pollingUnit" placeholder="Enter Polling Unit (e.g. PU 001 Town Hall)" required>
+
+        <label>Voter Identification Number (VIN) *</label>
+        <input type="text" id="vin" placeholder="Enter 19-digit VIN" required>
+
+        <label>Upload Voters Card (Image) *</label>
+        <input type="file" id="pvcImage" accept="image/*" required>
+
+        <button type="submit" id="submitBtn">Submit Registration</button>
+      </form>
+
+      <div id="status"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
